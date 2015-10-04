@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableViewDelegate
+class SignalViewControllerEx: UIViewController, MercuryInstrumentDelegate, UITableViewDataSource, UITableViewDelegate
 {
    @IBOutlet var _segmentedControl: UISegmentedControl!
    @IBOutlet var _listView: UIView!
@@ -17,9 +17,10 @@ class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableVi
    var _tableView:UITableView!
    
    var _signals:[Float]?
-   
+   var _statCount:Int?
+
    var instrument: MercuryInstrument?
-      {
+   {
       didSet
       {
          // Update the view.
@@ -35,8 +36,20 @@ class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableVi
       
       _listView.hidden = false
       _chartView.hidden = true
+      _signals = [Float]()
+      _statCount = 0
    }
    
+   override func viewDidAppear(animated: Bool)
+   {
+      instrument!.addDelegate(self)
+   }
+   
+   override func viewDidDisappear(animated: Bool)
+   {
+      instrument!.removeDelegate(self)
+   }
+
    @IBAction func indexChanged(sender: UISegmentedControl)
    {
       switch _segmentedControl.selectedSegmentIndex
@@ -57,6 +70,7 @@ class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableVi
       if let vc = segue.destinationViewController as? UITableViewController
          where segue.identifier == "EmbedSegue"
       {
+         _tableView = vc.tableView
          vc.tableView.dataSource = self
          vc.tableView.delegate = self
       }
@@ -100,13 +114,15 @@ class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableVi
    
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
    {
-      self.performSegueWithIdentifier("showSignalChooser", sender: tableView)
+      self.performSegueWithIdentifier("showSignalChooser", sender: _tableView)
    }
    
    func stat(message: NSData!, withSubcommand subcommand: uint)
    {
       print("stat in signal view")
       
+      _statCount!++
+
       dispatch_async(dispatch_get_main_queue(),
          { () -> Void in
             if subcommand == 0x00020002
@@ -123,10 +139,34 @@ class SignalViewControllerEx: UIViewController, UITableViewDataSource, UITableVi
                }
             }
             
-            self._tableView.reloadData()
+            //self._tableView.reloadData()
+            
+            if self._statCount! % 30 == 0
+            {
+               self._tableView.reloadData()
+            }
       })
    }
    
+   func response(message: NSData!, withSequenceNumber sequenceNumber: uint, subcommand: uint, status: uint)
+   {
+   }
+   
+   func ackWithSequenceNumber(sequencenumber: uint)
+   {
+   }
+   
+   func nakWithSequenceNumber(sequencenumber: uint, andError errorcode: uint)
+   {
+   }
+   
+   func connected()
+   {
+   }
+   
+   func accept(access: MercuryAccess)
+   {
+   }
    /*
    // MARK: - Navigation
    

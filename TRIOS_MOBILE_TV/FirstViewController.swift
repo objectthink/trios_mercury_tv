@@ -141,7 +141,7 @@ class FirstViewController: UIViewController, MercuryInstrumentDelegate
    {
       if segue.identifier == "showSignals"
       {
-         let controller = (segue.destinationViewController as! SignalViewController)
+         let controller = (segue.destinationViewController as! SignalViewControllerEx)
          
          controller.instrument = _instrument
       }

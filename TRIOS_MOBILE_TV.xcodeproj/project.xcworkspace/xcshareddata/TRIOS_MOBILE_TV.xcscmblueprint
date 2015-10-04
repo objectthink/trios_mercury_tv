@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E075CB9BB81731407512F8C5E69DF2703CDEE05D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8832AC3F90E240F55C70847B1A5DAB275B79C1B9" : 0,
+    "E075CB9BB81731407512F8C5E69DF2703CDEE05D" : 0,
+    "6263B798F17C6D5D4C7CBD7108B9FC95A390A78E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0D1362D6-EC10-4058-9EC7-EAF0B2C11489",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8832AC3F90E240F55C70847B1A5DAB275B79C1B9" : "MERCURY%20COMMS\/",
+    "E075CB9BB81731407512F8C5E69DF2703CDEE05D" : "TRIOS_MOBILE_TV\/",
+    "6263B798F17C6D5D4C7CBD7108B9FC95A390A78E" : "TRIOS_MOBILE\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TRIOS_MOBILE_TV",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TRIOS_MOBILE_TV.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/objectthink\/trios_mercury_mobile_2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6263B798F17C6D5D4C7CBD7108B9FC95A390A78E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/objectthink\/mercury_mobile_comms.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8832AC3F90E240F55C70847B1A5DAB275B79C1B9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/objectthink\/trios_mercury_tv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E075CB9BB81731407512F8C5E69DF2703CDEE05D"
+    }
+  ]
+}

@@ -298,7 +298,7 @@
                         <animations/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" id="xuk-3W-Gcr">
-                                <rect key="frame" x="0.0" y="54" width="1840" height="66"/>
+                                <rect key="frame" x="0.0" y="54" width="1880" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuk-3W-Gcr" id="hUz-CN-wFb">
                                     <rect key="frame" x="0.0" y="0.0" width="1864" height="66"/>
@@ -336,10 +336,10 @@
                         </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" id="TqR-yj-Oqd">
-                                <rect key="frame" x="0.0" y="98" width="1880" height="66"/>
+                                <rect key="frame" x="0.0" y="98" width="1920" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TqR-yj-Oqd" id="Jex-oa-27Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="1880" height="66"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
